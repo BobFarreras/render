@@ -35,8 +35,8 @@ const server = http.createServer(async (req, res) => {
   const orig = payload.original || payload.orig || '';
   const neu = payload.new || payload.nou || payload.nuevo || '';
 
-  // Fem servir la llibreria 'diff' per trobar les diferències
-  const differences = diff.diffChars(orig, neu);
+  // AQUESTA ÉS LA SOLUCIÓ
+  const differences = diff.diffWords(orig, neu);
   
   let added = '';
   let removed = '';
